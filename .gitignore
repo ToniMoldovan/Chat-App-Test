@@ -1,0 +1,3 @@
+# ignore basic intelliji files
+.idea/
+*.iml
