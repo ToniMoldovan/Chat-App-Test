@@ -1,29 +1,15 @@
-# I am building a PHP Chat Application. I am using the following docker-compose.yml file to build the application.
-# Let's get started.
+# I am building a PHP Chat Application.
 version: '3.7' # This is the version of docker-compose.yml file.
 
 services:
-  # what services do I need to run my application?
-    # I need a database, a web server, and a php server.
-    # I need a database to store the data.
-    # I need a web server to serve the static files.
-    # I need a php server to serve the dynamic files.
-
-  # what web server do I need for this Chat Application in which I want to use Ratchet Websockets?
-  # I need a web server that supports websockets.
-
   web-server:
     # let's use nginx for this.
     image: nginx:latest
-    # I need to expose the port 80 of the web server to the outside world.
     ports:
       - "5600:80" # access at: localhost:5600
-    # I need to mount the current directory to the web server. So that I can access the files in the current directory from the web server. Let's do that.
+    # I need to mount the current directory to the web server. So that I can access the files in the current directory from the web server.
     volumes:
       - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf # mount the default.conf file to the web server.
-
-  # what php server do I need for this Chat Application in which I want to use Ratchet Websockets?
-    # I need a php server that supports websockets.
   app:
     build:
       dockerfile: ./php/Dockerfile
