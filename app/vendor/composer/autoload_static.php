@@ -98,8 +98,8 @@ class ComposerStaticInitb49ad61e783577d6a0ec0ce646c696de
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
